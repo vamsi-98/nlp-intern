@@ -124,7 +124,7 @@ def getsalyear(request,responder):
            if years[i] == askedyear:
                 req = sals[i]
                 break
-       responder.reply("The company gave a salary of " + req)        
+       responder.reply(askedcompany +" gave a salary of " + req + " in the year " + askedyear)        
         
 
 @app.handle(intent='get_companies')
