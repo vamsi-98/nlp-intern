@@ -1,0 +1,33 @@
+{
+  
+  "entities":[
+
+       {  "id":"1",
+          "cname":"google",
+           "whitelist":["googel","googly"]
+        },
+       {  "id":"2",
+          "cname":"wipro",
+           "whitelist":["wiproo","wepro","vpro"]
+        },
+       {  "id":"3",
+          "cname":"deshaw",
+           "whitelist":[]
+        },
+       {  "id":"3",
+          "cname":"jpmorgan",
+           "whitelist":[]
+        },
+       {
+         "id":"4",
+         "cname":"oracle",
+         "whitelist":[]
+      }
+
+
+    ]
+
+
+
+
+}

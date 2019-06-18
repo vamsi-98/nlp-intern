@@ -1,0 +1,30 @@
+[
+  {
+     "id":"1",
+     "company_name":"wipro",
+     "years":"2017 2018",
+     "sals": "6lpa 7lpa"
+  }
+  ,
+  {
+     "id":"2",
+     "company_name":"google",
+     "years":"2017 2018",
+     "sals": "20lpa 30lpa"
+  },
+  {
+     "id":"3",
+     "company_name":"deshaw",
+     "years":"2016 2018",
+     "sals": "28lpa 30lpa"
+  },
+  {
+    "id":"4",
+    "company_name":"oracle",
+    "years":"2017 2018",
+    "sals":"10lpa 11lpa" 
+
+
+ }
+
+]

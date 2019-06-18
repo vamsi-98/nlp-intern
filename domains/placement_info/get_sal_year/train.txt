@@ -1,0 +1,18 @@
+How much salary {google|companies} gave in {2014|sys_time}
+How much salary did {google|companies} gave in {2014|sys_time}
+How much money did {google|companies} gave in {2014|sys_time}
+How much package did {google|companies} gave in {2014|sys_time}
+How much package {google|companies} gave in {2014|sys_time}
+What is the package  {google|companies} gave in {2014|sys_time}
+package of {google|companies}  in {2014|sys_time}
+package which {google|companies} gave in {2014|sys_time}
+How much salary did {google|companies} gave in {2014|sys_time}
+How much salary {google|companies} gave in {2014|sys_time}
+What is the salary {google|companies} gave in {2014|sys_time}
+salary of {google|companies}  in {2014|sys_time}
+salary which {google|companies} gave in {2014|sys_time}
+salary in {2014|sys_time}
+package in {2014|sys_time}
+placement in {2014|sys_time}
+{google|companies}
+
