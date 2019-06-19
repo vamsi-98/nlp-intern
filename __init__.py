@@ -67,23 +67,13 @@ def getyear(request,responder):
 
 @app.handle(intent='get_sal_year')
 def getsalyear(request,responder):
-    print(type(request.history)) 
-    print('************"') 
-    for i in request.history:
-        print(i)
-    print("*************")
-    print(request.history[0]['request']['entities'])
+    conyear = request.frame.get('year')
+    print(request.frame.get('year'))
+    print(type(responder))
     askedcompany = "Not"
-    if len(request.history) and request.history[0]['request']['entities'] != ():
-         print(type(request.history[0]['request']['entities'][0]['text']))    
-    if len(request.history) and request.history[0]['request']['entities'] != ():
-          askedyear = request.history[0]['request']['entities'][0]['text']
-    else:
-          askedyear = -1
-    print("hist",askedyear)  
-    
-    printdash()
-           
+    askedyear = "-1"    
+    #print(request.history[0]['request']['entities'])
+          
     print("hist type",type(askedyear))
     for i in request.entities:
         if i['type'] == 'companies':
@@ -96,22 +86,27 @@ def getsalyear(request,responder):
             askedyear = i['text']
             print(i['text'])
 
+    if conyear == None or (conyear != askedyear and askedyear!="-1"):
+        conyear = askedyear
+        responder.frame['year'] = conyear
+
 
     print(askedcompany,askedyear)
    
     if askedcompany == "Not":
         responder.reply("please tell the company Name")
+        responder.frame['year'] = conyear
         responder.listen()
     else:
        print("Inside")
-       print(askedyear) 
+       print(askedyear,conyear) 
        cnames = app.question_answerer.get(index='companies') 
        print(cnames)
        flag = 0
        info = None
        for i in cnames:
             print(i['company_name']," +++++ " ,i['years'])
-            if i['company_name'].lower() == askedcompany.lower() and (askedyear in i['years']) :
+            if i['company_name'].lower() == askedcompany.lower() and (conyear in i['years']) :
                 info = i
                 print(i)
                 print('Found')
@@ -121,10 +116,10 @@ def getsalyear(request,responder):
        sals = list(info['sals'].split())
        req = 0 
        for i in range(len(years)):
-           if years[i] == askedyear:
+           if years[i] == conyear:
                 req = sals[i]
                 break
-       responder.reply(askedcompany +" gave a salary of " + req + " in the year " + askedyear)        
+       responder.reply(askedcompany +" gave a salary of " + req + " in the year " + conyear)        
         
 
 @app.handle(intent='get_companies')
